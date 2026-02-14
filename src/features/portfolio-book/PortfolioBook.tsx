@@ -140,11 +140,11 @@ export const PortfolioBook = observer(() => {
       : 0
 
   // Добавьте для отладки
-  useEffect(() => {
-    if (containerRef.current) {
-      containerRef.current.getBoundingClientRect()
-    }
-  }, [containerSize])
+  // useEffect(() => {
+  //   if (containerRef.current) {
+  //     containerRef.current.getBoundingClientRect()
+  //   }
+  // }, [containerSize])
 
   return (
     <>

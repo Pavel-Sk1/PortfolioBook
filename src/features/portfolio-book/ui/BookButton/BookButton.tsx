@@ -28,7 +28,7 @@ export const BookButton = ({
       <ArrowIcon
         style={{
           transform: rotation,          
-          width: '20px',
+          width: '50%',
           height: '20px',
           fill: 'var(--background-secondary)',           
         }}
