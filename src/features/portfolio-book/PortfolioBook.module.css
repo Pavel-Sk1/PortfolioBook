@@ -1,0 +1,62 @@
+.book-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 95vw;
+  height: 100%;
+  max-height: 95vh;
+  margin: 10px;
+  position: relative;
+}
+
+.book-layout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.book-loader {
+  width: 100%;
+  max-width: 400;
+  height: 100%;
+  max-height: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(245, 245, 245);
+  border-radius: 4px;
+}
+
+.book-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+}
+
+.book-pages {
+  position: relative;
+}
+
+.book-zoom-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  will-change: transform;
+}
+
+.zoom-spread {
+  display: flex;
+  height: 100%;
+}
+
+.zoom-spread img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

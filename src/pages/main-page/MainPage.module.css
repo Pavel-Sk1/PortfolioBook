@@ -1,0 +1,12 @@
+.page-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  padding: 15px 15px 55px;  
+  overflow: hidden;
+  background-color: var(--background-primary);
+}

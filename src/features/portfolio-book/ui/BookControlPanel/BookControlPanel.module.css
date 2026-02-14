@@ -1,0 +1,19 @@
+.book-control-panel {
+  position: fixed;
+  bottom: 0;
+  background-color: var(--background-secondary);
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+.control-panel-count {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: var(--font-size-large);
+  color: var(--text-color-secondary);
+}
