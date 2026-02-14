@@ -139,12 +139,8 @@ export const PortfolioBook = observer(() => {
       ? Math.min(desiredPageHeight, containerSize.height)
       : 0
 
-  // Добавьте для отладки
-  useEffect(() => {
-    if (containerRef.current) {
-      containerRef.current.getBoundingClientRect()
-    }
-  }, [containerSize])
+  const showSpineShadow =
+    pages.length > 1 && currentPage !== 0 && currentPage !== pages.length - 1
 
   return (
     <>
@@ -236,7 +232,7 @@ export const PortfolioBook = observer(() => {
                           autoSize={false}
                           drawShadow={true}
                           flippingTime={800}
-                          maxShadowOpacity={0.1}
+                          maxShadowOpacity={0.2}
                           usePortrait={false}
                           startZIndex={0}
                           startPage={currentPage}
@@ -257,16 +253,20 @@ export const PortfolioBook = observer(() => {
                         >
                           {pages.map((pageImage: IPageImage, index: number) => (
                             <BookPage
-                              key={index}
-                              pageNumber={pageImage.page}
+                              key={index}                              
                               image={pageImage.image}
                               width={pageWidth}
                               height={bookHeight}
+                              pageNumber={pageImage.page}
                               onLinkClick={handlePageSelect}
                             />
                           ))}
                         </HTMLFlipBook>
                       )}
+                      
+                      {/* {showSpineShadow && (
+                        <div className={styles['book-spine-shadow']} />
+                      )} */}
                     </div>
                   )}
               </div>

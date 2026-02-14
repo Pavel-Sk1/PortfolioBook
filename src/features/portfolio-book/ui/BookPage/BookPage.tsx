@@ -2,18 +2,27 @@ import { forwardRef } from 'react'
 import { BookContentLinks } from '../BookContentLinks/BookContentLinks'
 import styles from './BookPage.module.css'
 import { observer } from 'mobx-react-lite'
+import { bookPagesStore } from '@/entities'
 
 interface BookPageProps {
-  pageNumber: number
   image: string
   width: number
   height: number
+  pageNumber: number
   onLinkClick: (linkIndex: number) => void
 }
 
 export const BookPage = observer(
   forwardRef<HTMLDivElement, BookPageProps>(
     ({ pageNumber, image, width, height, onLinkClick }, ref) => {
+      const { pages } = bookPagesStore
+      const pageShadowGradient =
+        pageNumber % 2 === 0
+          ? 'linear-gradient(to right, transparent 95%, rgba(0, 0, 0, 0.2) 100%)' // левая страница – тень справа
+          : 'linear-gradient(to left, transparent 95%, rgba(0, 0, 0, 0.15) 100%)' // правая страница – тень слева
+      const isBookCover = pageNumber === 1 || pageNumber === pages.length 
+      console.log('!!!!', pageNumber, isBookCover)
+
       return (
         <div
           ref={ref}
@@ -24,6 +33,14 @@ export const BookPage = observer(
           }}
         >
           <div style={{ position: 'relative' }}>
+            {!isBookCover && (
+              <div
+                className={styles['shadow-gradient']}
+                style={{
+                  background: pageShadowGradient,
+                }}
+              />
+            )}
             <img
               src={image}
               alt={`Страница ${pageNumber}`}

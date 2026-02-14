@@ -1,6 +1,5 @@
 .book-arrow-button {
-  width: 48px;
-  /* min-width: 48px; */
+  width: 3%;  
   display: flex;
   align-items: center;
   justify-content: center;  
@@ -8,7 +7,7 @@
   z-index: 10;
   cursor: pointer;
   background-color: var(--btn-primary-bg);
-  /* flex-shrink: 0; */
+  flex-shrink: 0;
 }
 
 .book-arrow-button:hover {
