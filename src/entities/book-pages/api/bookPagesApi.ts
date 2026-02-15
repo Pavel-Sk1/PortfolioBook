@@ -65,7 +65,8 @@ export const getAllBookContentLinks = async (): Promise<
   try {
     const response = await axiosInstance.get<
       ServerResponseType<DtoBookContentLinks[]>
-    >('public/book_content_links.json')
+    >('./links/book_content_links.json')
+console.log('getAllBookContentLinks', response.data);
 
     if (response.data.statusCode !== 200) {
       throw new Error(response.data.error ?? response.data.message)

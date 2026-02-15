@@ -20,8 +20,7 @@ export const BookPage = observer(
         pageNumber % 2 === 0
           ? 'linear-gradient(to right, transparent 95%, rgba(0, 0, 0, 0.2) 100%)' // левая страница – тень справа
           : 'linear-gradient(to left, transparent 95%, rgba(0, 0, 0, 0.15) 100%)' // правая страница – тень слева
-      const isBookCover = pageNumber === 1 || pageNumber === pages.length 
-      console.log('!!!!', pageNumber, isBookCover)
+      const isBookCover = pageNumber === 1 || pageNumber === pages.length
 
       return (
         <div
