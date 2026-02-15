@@ -1,7 +1,7 @@
 // Redux exports (можно удалить после полного перехода на MobX)
 export { getAllBookPagesThunk } from './api/bookPagesThunkApi'
-export { setCurrentPage, type IPageImage } from './model/bookPagesSlice'
 
 // MobX exports
-export { bookPagesStore } from './model/BookPagesStore'
+export { bookPagesStore } from './model/bookPagesStore'
 export { getAllBookPages } from './api/bookPagesApi'
+export { type IPageImage } from './model/book.types'

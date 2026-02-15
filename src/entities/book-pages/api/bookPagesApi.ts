@@ -1,8 +1,7 @@
 import { axiosInstance, type ServerResponseType } from '@/shared'
 
 import type {
-  DtoBookContentLinks,
-  IBookContentLinks,
+  DtoBookContentLinks,  
   IPageImage,
 } from '../model/book.types'
 
