@@ -139,9 +139,6 @@ export const PortfolioBook = observer(() => {
       ? Math.min(desiredPageHeight, containerSize.height)
       : 0
 
-  const showSpineShadow =
-    pages.length > 1 && currentPage !== 0 && currentPage !== pages.length - 1
-
   return (
     <>
       {/* Область книги */}

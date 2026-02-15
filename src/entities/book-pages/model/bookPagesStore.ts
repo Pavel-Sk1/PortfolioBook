@@ -1,4 +1,4 @@
-import { makeAutoObservable, runInAction, toJS } from 'mobx'
+import { makeAutoObservable, runInAction } from 'mobx'
 import { getAllBookContentLinks, getAllBookPages } from '../api/bookPagesApi'
 import type { IBookContentLinks, IPageImage } from './book.types'
 

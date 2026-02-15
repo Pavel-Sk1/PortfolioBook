@@ -1,0 +1,52 @@
+# Имя workflow (будет отображаться в GitHub)
+name: Deploy to GitHub Pages
+
+# Событие, при котором workflow запускается
+on:
+  push:
+    branches: ['main']   # при пуше в ветку main
+
+# Разрешения, необходимые для деплоя на Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Запускаем только один экземпляр сборки одновременно
+concurrency:
+  group: 'pages'
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    # Виртуальная машина (среда сборки) — Ubuntu Linux
+    runs-on: ubuntu-latest
+    steps:
+      # 1. Клонируем репозиторий (ваш код)
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 2. Устанавливаем Node.js (версия 20)
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'          # кешируем зависимости для ускорения
+
+      # 3. Устанавливаем зависимости (строго по package-lock.json)
+      - name: Install dependencies
+        run: npm ci
+
+      # 4. Собираем проект (создаётся папка dist)
+      - name: Build project
+        run: npm run build
+
+      # 5. Загружаем папку dist как артефакт для GitHub Pages
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './dist'        # указываем папку со статикой
+
+      # 6. Деплоим на GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4

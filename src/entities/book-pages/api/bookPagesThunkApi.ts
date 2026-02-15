@@ -1,5 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit'
-import { axiosInstance, type ServerResponseType } from '@/shared'
+import { type ServerResponseType } from '@/shared'
 import { AxiosError } from 'axios'
 import type { IPageImage } from '@/entities'
 
