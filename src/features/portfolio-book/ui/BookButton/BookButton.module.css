@@ -3,8 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: center;  
-  position: relative;
-  z-index: 10;
+  position: relative;  
   cursor: pointer;
   background-color: var(--btn-primary-bg);
   flex-shrink: 0;
