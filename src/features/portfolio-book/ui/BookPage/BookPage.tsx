@@ -68,9 +68,11 @@ export const BookPage = observer(
                 }
               }}
             />
-            {pageNumber === 2 && (
-              <BookContentLinks onSelectPage={onLinkClick} />
-            )}
+
+            <BookContentLinks
+              onSelectPage={onLinkClick}
+              pageNumber={pageNumber}
+            />
           </div>
         </div>
       )
