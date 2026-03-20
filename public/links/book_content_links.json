@@ -1,12 +1,90 @@
 [
-  { "project_title": "project 1", "page_number": 3 },
-  { "project_title": "project 2", "page_number": 5 },
-  { "project_title": "project 3", "page_number": 7 },
-  { "project_title": "project 4", "page_number": 8 },
-  { "project_title": "project 5", "page_number": 11 },
-  { "project_title": "project 6", "page_number": 13 },
-  { "project_title": "project 7", "page_number": 15 },
-  { "project_title": "project 8", "page_number": 17 },
-  { "project_title": "project 9", "page_number": 19 },
-  { "project_title": "project 10", "page_number": 21 }
+  {
+    "page_number": 1,
+    "page_name": "Первый проект",
+    "position": {
+      "left": 500,
+      "top": 222
+    },
+    "project_text_color": "rgba(20,77,54,1)",
+    "links_text_color": "rgba(230,50,61,1)",
+    "page_links": [
+      { "project_title": "Проект 1", "page_number": 1 },
+      { "project_title": "Проект 2", "page_number": 4 },
+      { "project_title": "Проект 3", "page_number": 6 },
+      { "project_title": "Проект 4", "page_number": 15 },
+      { "project_title": "Проект 5", "page_number": 11 },
+      { "project_title": "Проект 6", "page_number": 13 },
+      { "project_title": "Проект 7", "page_number": 15 },
+      { "project_title": "Проект 8", "page_number": 17 },
+      { "project_title": "Проект 9", "page_number": 19 },
+      { "project_title": "Проект 10", "page_number": 21 }
+    ]
+  },
+  {
+    "page_number": 4,
+    "page_name": "Второй",
+    "position": {
+      "left": 100,
+      "top": 300
+    },
+    "project_text_color": "rgba(123,123,123,1)",
+    "links_text_color": "rgba(222,222,0,1)",
+    "page_links": [
+      { "project_title": "Проект 1", "page_number": 1 },
+      { "project_title": "Проект 2", "page_number": 4 },
+      { "project_title": "Проект 3", "page_number": 6 },
+      { "project_title": "Проект 4", "page_number": 15 },
+      { "project_title": "Проект 5", "page_number": 11 },
+      { "project_title": "Проект 6", "page_number": 13 },
+      { "project_title": "Проект 7", "page_number": 15 },
+      { "project_title": "Проект 8", "page_number": 17 },
+      { "project_title": "Проект 9", "page_number": 19 },
+      { "project_title": "Проект 10", "page_number": 21 }
+    ]
+  },
+  {
+    "page_number": 6,
+    "page_name": "Третий проект",
+    "position": {
+      "left": 576,
+      "top": 355
+    },
+    "project_text_color": "rgba(36,62,22,1)",
+    "links_text_color": "rgba(106,55,222,1)",
+    "page_links": [
+      { "project_title": "Проект 1", "page_number": 1 },
+      { "project_title": "Проект 2", "page_number": 4 },
+      { "project_title": "Проект 3", "page_number": 6 },
+      { "project_title": "Проект 4", "page_number": 15 },
+      { "project_title": "Проект 5", "page_number": 11 },
+      { "project_title": "Проект 6", "page_number": 13 },
+      { "project_title": "Проект 7", "page_number": 15 },
+      { "project_title": "Проект 8", "page_number": 17 },
+      { "project_title": "Проект 9", "page_number": 19 },
+      { "project_title": "Проект 10", "page_number": 21 }
+    ]
+  },
+  {
+    "page_number": 15,
+    "page_name": "",
+    "position": {
+      "left": 521,
+      "top": 456
+    },
+    "project_text_color": "rgba(0,123,76,1)",
+    "links_text_color": "rgba(0,0,221,1)",
+    "page_links": [
+      { "project_title": "Проект 1", "page_number": 1 },
+      { "project_title": "Проект 2", "page_number": 4 },
+      { "project_title": "Проект 3", "page_number": 6 },
+      { "project_title": "Проект 4", "page_number": 15 },
+      { "project_title": "Проект 5", "page_number": 11 },
+      { "project_title": "Проект 6", "page_number": 13 },
+      { "project_title": "Проект 7", "page_number": 16 },
+      { "project_title": "Проект 8", "page_number": 17 },
+      { "project_title": "Проект 9", "page_number": 19 },
+      { "project_title": "Проект 10", "page_number": 21 }
+    ]
+  }
 ]

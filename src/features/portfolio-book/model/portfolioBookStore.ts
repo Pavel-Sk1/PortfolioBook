@@ -1,4 +1,5 @@
 import { makeAutoObservable } from 'mobx'
+import type { PageState } from './book.types'
 
 export class PortfolioBookStore {
   scale: number = 1
@@ -6,6 +7,8 @@ export class PortfolioBookStore {
   bookOffset: number = 0
 
   isZoomed: boolean = false
+
+  pageState: PageState = 'read'
 
   constructor() {
     makeAutoObservable(this)
@@ -25,6 +28,10 @@ export class PortfolioBookStore {
 
   toggleZoom = () => {
     this.isZoomed = !this.isZoomed
+  }
+
+  setPageState = (state: PageState) => {
+    this.pageState = state
   }
 }
 export const portfolioBookStore = new PortfolioBookStore()

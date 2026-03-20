@@ -6,7 +6,6 @@ export const axiosInstance = axios.create({
   headers: { 'Content-Type': 'application/json' },
   withCredentials: true,
 });
-console.log('axiosInstance', import.meta.env.VITE_API);
 
 let accessToken = '';
 

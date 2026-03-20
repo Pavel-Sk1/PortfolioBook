@@ -2,9 +2,7 @@
   color: var(--link-text-color);
   font-size: clamp(0.75rem, 1.5vw, 1rem);
   font-weight: var(--font-weight-large);
-  position: absolute;
-  bottom: 51%;
-  left: 65%;  
+  position: absolute;  
   display: flex;
   flex-direction: column;
   gap: 6px;

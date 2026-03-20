@@ -1,4 +1,4 @@
-import { makeAutoObservable, runInAction } from 'mobx'
+import { makeAutoObservable, runInAction, toJS } from 'mobx'
 import { getAllBookContentLinks, getAllBookPages } from '../api/bookPagesApi'
 import type { IBookContentLinks, IPageImage } from './book.types'
 
@@ -21,7 +21,7 @@ export class BookPagesStore {
   }
 
   // Действие для загрузки всех страниц книги
-  async loadBookPages() {
+   loadBookPages = async () => {
     runInAction(() => {
       this.isLoadingPages = true
       this.pagesError = null
@@ -54,8 +54,15 @@ export class BookPagesStore {
 
       runInAction(() => {
         this.contentLinks = response.data.map(item => ({
-          projectTitle: item.project_title,
           pageNumber: item.page_number,
+          pageName: item.page_name,
+          position: item.position,
+          projectTextColor: item.project_text_color,
+          linksTextColor: item.links_text_color,
+          pageLinks: item.page_links.map(link => ({
+            projectTitle: link.project_title,
+            pageNumber: link.page_number,
+          }))
         }))
       })
     } catch (error) {
@@ -65,7 +72,15 @@ export class BookPagesStore {
       })
     }
   }
+
+  getPageLinks = (pageNumber: number): IBookContentLinks | undefined => {
+    
+    
+  return this.contentLinks.find(item => item.pageNumber === pageNumber);
+};
 }
+
+
 
 // Создаем единственный экземпляр store (singleton)
 export const bookPagesStore = new BookPagesStore()

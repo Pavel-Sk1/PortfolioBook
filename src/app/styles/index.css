@@ -16,7 +16,7 @@ body *::after {
     -apple-system,
     BlinkMacSystemFont,
     'Segoe UI',
-    sans-serif;  
+    sans-serif;
 }
 
 button {
@@ -26,4 +26,8 @@ button {
 a,
 button {
   cursor: pointer;
+}
+ul,
+li {
+  list-style: none;  
 }
